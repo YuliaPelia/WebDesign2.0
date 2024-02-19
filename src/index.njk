@@ -9,11 +9,12 @@
 
 
 {% block content %}
-{% block header %}
+
 
 {% include "./components/header/header.njk" %}
 {% include "./components/intro/intro.njk" %}
-{% endblock %}
+{% include "./components/about/about.njk" %}
+
 
   <div class="page-home page">
     <div class="container">
@@ -75,13 +76,14 @@
         </h3>
         {# not passing maxWidth here #}
         <div class="max-w-xs">
-          {% image './src/images/cat.jpg',
+          {% image './src/images/intro/boy-desk1x.png',
             {
               alt: 'Cat',
               class: 'example-image block max-w-full h-auto'
             }
           %}
-             {% image './src/images/boy-mobile.png',
+
+          {% image './src/images/about/orange-mobile.png',
             {
               alt: 'Cat',
               class: 'example-image block max-w-full h-auto'

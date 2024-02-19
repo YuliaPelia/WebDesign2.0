@@ -1,0 +1,135 @@
+<section id="about" class="about z-10 relative top-[-140px] pt-[160px] pb-[80px] lg:top-[-180px] lg:pt-[200px] xl:pt-[400px] xl:top-[-300px]">
+  <div class="container xl:flex items-center justify-between">
+    <div class="xl:max-w-[577px]">
+      <div>
+        <h2 class="mb-5 font-mono text-[18px] font-semibold uppercase leading-[1.3] text-white md:text-[24px] md:leading-[1.4] xl:mb-8">
+          Курс від GoITeens — це можливість розпочати кар’єру цифрового
+          дизайнера вже у школі
+        </h2>
+        <p class="text-base text-[#FAFAFA] md:text-xl xxl:font-normal">
+          Дизайн — це найбільш творчий та доступний для опанування напрям у IT. <br />
+          <br />
+          Аби стати айтівцем, дитині не обов’язково вчити програмування. Дизайн не
+          потребує знання коду, математичних здібностей та навіть художнього хисту.
+          <br /> <br /> Та при цьому цифровий дизайн — один з найперспективніших
+          напрямів у IT. Дизайнери беруть участь у створенні вебсайтів, застосунків,
+          програмного забезпечення, ігор, реклами тощо.
+        </p>
+
+        <hr class="mb-[32px] mt-[32px] text-base font-normal text-[#cc6821] md:mb-10 md:text-xl xl:mb-0 xl:gap-3 xl:hidden" />
+      </div>
+      <div>
+        <ul class="grid grid-cols-2 gap-8 border-[#CC6821] pt-8 font-mono md:gap-x-[59px] md:pt-10 xl:gap-x-[120px] xl:pt-0 notXl:border-t">
+          <li>
+            <h3 class="mb-2 text-sm text-[#FAFAFA] md:mb-3 md:text-xl">
+              Вік студентів
+            </h3>
+            <div>
+              <p class="text-lg font-semibold text-white md:text-2xl">
+                10-16 років
+              </p>
+            </div>
+          </li>
+          <li>
+            <h3 class="mb-2 text-sm text-[#FAFAFA] md:mb-3 md:text-xl">
+              Тривалість курсу
+            </h3>
+            <div>
+              <p class="text-lg font-semibold text-white md:text-2xl">
+                12/24 місяці
+              </p>
+            </div>
+          </li>
+          <li>
+            <h3 class="mb-2 text-sm text-[#FAFAFA] md:mb-3 md:text-xl">
+              Для навчання потрібно
+            </h3>
+            <div>
+              <p class="text-lg font-semibold text-white md:text-2xl">
+                комп'ютер чи ноутбук
+              </p>
+            </div>
+          </li>
+          <li>
+            <h3 class="mb-2 text-sm text-[#FAFAFA] md:mb-3 md:text-xl">
+              Випускників
+            </h3>
+            <div class="flex items-center gap-4">
+              {% image './src/images/about/graduates2x.png',
+                {
+                  alt: 'graduates',
+                  class: 'w-[130px]'
+                },
+                500
+              %}
+              <p class="text-lg font-semibold text-white md:text-2xl">
+                420+
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <form class="mt-10 min-h-[328px] md:ml-auto md:mt-[60px] md:min-h-[408px] xl:w-[550px] xl:border-l xl:border-[#CC6821] xl:mt-0 xl:pl-8 xxl:w-[744px] xxl:pl-[56px]">
+        <div class="flex flex-wrap gap-6 md:gap-[32px]">
+          <label for="username"
+            class="flex items-center justify-between w-full h-[48px] pl-[24px] pr-[16px] bg-white rounded-[140px]">
+            <input required
+              name="username"
+              id="username"
+              class="input-field w-full outline-none"
+              type="text"
+              placeholder="Введіть своє ім'я" />
+            <svg class="w-[24px] md:hidden">
+              <use href="#close"></use>
+            </svg>
+          </label>
+          <label for="tel"
+            class="w-full flex items-center justify-between h-[48px] pl-[24px] pr-[16px] bg-white rounded-[140px]">
+            <div>
+              <input required
+                name="tel"
+                id="tel"
+                class="w-[230px] outline-none"
+                id="phone"
+                type="tel"
+                placeholder="+38 (066) 123 45 67" />
+            </div>
+
+            <svg class="w-[24px] md:hidden">
+              <use href="#close"></use>
+            </svg>
+          </label>
+          <label for="email"
+            class="flex items-center justify-between w-full h-[48px] pl-[24px] pr-[16px] bg-white rounded-[140px]">
+            <input required
+              name="email"
+              id="email"
+              class="w-[230px] outline-none"
+              type="email"
+              placeholder="Введіть свій email" />
+            <svg class="w-[24px] md:hidden">
+              <use href="#close"></use>
+            </svg>
+          </label>
+          <label for="promocode" class="flex items-center justify-between w-full h-[48px] pl-[24px] pr-[16px] bg-white rounded-[140px]">
+            <input 
+            name="promocode"
+            id="promocode"
+              class="w-[230px] outline-none"
+              type="text"
+              placeholder="Ввведіть промокод" />
+            <svg class="w-[24px] md:hidden">
+              <use href="#close"></use>
+            </svg>
+          </label>
+        </div>
+        <button class="rounded-[104px] w-full px-[24px] py-[8px] bg-[#5331b2] text-white mt-[24px] hover:bg-[#2c0e80] cursor-pointer">
+          Записатися на безоплатний урок
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

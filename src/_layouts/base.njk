@@ -9,6 +9,8 @@
     </title>
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css" />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;600;700&display=swap"
       rel="stylesheet" />
     {% block stylesheets %}
@@ -24,6 +26,16 @@
     {% endblock %}
 
     {% block scripts %}
+      <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+      <script type="module">
+        var input = document.querySelector('#phone'); window.intlTelInput(input,
+        { utilsScript:
+        'https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js',
+        separateDialCode: true, initialCountry: 'ua', excludeCountries: ['ru',
+        'by'], customPlaceholder: true, onlyCountries: [ 'ua', 'at', 'bg', 'hu',
+        'de', 'gr', 'dk', 'ie', 'es', 'it', 'cy', 'lv', 'lt', 'lu', 'mt', 'nl',
+        'pl', 'pg', 'ro', 'sk', 'si', 'fi', 'hr', 'cz', 'se', 'ee', ], });
+      </script>
       <script src="{{ STATIC_PATH }}/js/bundle.js"></script>
     {% endblock %}
   </body>
