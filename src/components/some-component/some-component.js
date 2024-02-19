@@ -9,6 +9,7 @@ class SomeComponent {
 
   constructor() {
     /** @type {HTMLElement[]} */
+    
     this.itemArr = [];
 
     this.containerNode = document.querySelector('[data-widget]');

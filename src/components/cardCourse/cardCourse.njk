@@ -1,0 +1,58 @@
+{% set cards = [
+  {
+    caption: 'Початковий курс Design Junior',
+    group: 'Група для дітей 10-12 років',
+    time: '12 місяців',
+    lesson: '2 заняття на тиждень по 60-90 хв',
+    styles: 'bg-[#EBE6FA]  xl:relative xl:top-[-140px] xl:h-[882px]',
+    descr: 'Цей курс — знайомство з основами дизайну, популярними сервісами та
+          інструментами початкового рівня. На ньому діти навчаться створювати
+          графічні образи та використовувати їх для оформлення соцмереж та
+          шкільних проєктів.',
+    subtitle: 'На цьому курсі студенти навчаються та працюють в таких програмах:',
+    programs: '../programList/programListBegginer.njk'
+  },
+  {
+    caption: 'Професійний курс Digital Design',
+    group: 'Група для підлітків 13-16 років',
+    time: '24 місяці',
+    lesson: '3 заняття на тиждень по 60-90 хв',
+    styles: 'bg-[#FAEEE6]',
+    descr: 'Повноцінна навчальна програма з дизайну сайтів, застосунків, ігор та реклами від школи GoIT, адаптована для підлітків. На курсі ми готуємо молодших спеціалістів з цифрового дизайну для роботи в комерційних проєктах.',
+    subtitle: 'На цьому курсі студенти навчаються та працюють в таких програмах:',
+    programs: '../programList/programListProffesional.njk'
+  }
+] %}
+
+
+  {% if cards.length %}
+    {% for card in cards %}
+      <div class="course__start -mx-3 mb-10 px-5 py-6 md:px-8 md:py-10 xl:mb-0 sm:max-w-[450px] sm:mx-auto md:max-w-[704px]  {{card.styles}}">
+        <h3 class="mb-7 font-mono text-[18px] font-semibold uppercase text-black-1A md:mb-6 md:text-2xl xxl:text-center  " >
+          {{ card.caption }}
+        </h3>
+        <ul class="mb-6 flex flex-wrap gap-y-6 text-[12px] text-black-1A md:mb-10 md:text-xl xl:justify-center">
+          <li class="rounded-[16px] bg-[#C2B0F5] px-3 py-1 odd:mr-2 md:rounded-3xl md:px-6 md:py-3 md:odd:mr-6">
+            {{ card.group }}
+          </li>
+          <li class="rounded-[16px] bg-[#C2B0F5] px-3 py-1 odd:mr-2 md:rounded-3xl md:px-6 md:py-3 md:odd:mr-6">
+            {{ card.time }}
+          </li>
+          <li class="rounded-[16px] bg-[#C2B0F5] px-3 py-1 odd:mr-2 md:rounded-3xl md:px-6 md:py-3 md:odd:mr-6">
+            {{ card.lesson }}
+          </li>
+        </ul>
+        <p class="mb-8 md:mb-10 md:text-xl">
+          {{ card.descr }}
+        </p>
+        <h3 class="mb-5 font-semibold md:text-xl">
+          {{ card.subtitle }}
+        </h3>
+
+        {% include card.programs %}
+      </div>
+    {% endfor %}
+  {% else %}
+    <li>Бідаааа</li>
+  {% endif %}
+

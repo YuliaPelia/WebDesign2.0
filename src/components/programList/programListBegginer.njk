@@ -1,0 +1,40 @@
+<ul class="program-list-top text-[14px] md:text-[16px] text-[#6E6E6E]">
+  {% set items = [
+    {
+      text: 'Безкоштовний повноцінний редактор зображень, який працює у браузері',
+      img: './src/images/course/photopea.png',
+      alt: 'photopea',
+      classWidth: 'w-[113px] h-[23px]'
+    },
+    {
+      text: 'Безкоштовний графічний редактор, який чудово підходить для новачків у
+      дизайні',
+      img: './src/images/course/canva.png',
+      alt: 'canva',
+      classWidth: 'w-[87px] h-[32px]'
+    },
+    {
+      text: ' Міжнародна платформа, яка дозволяє конструювати сайти без знання коду',
+      img: './src/images/course/wix.png',
+      alt: 'wix',
+      classWidth: 'w-[75px] h-[32px]'
+    }
+  ] %}
+  {% if items.length %}
+    {% for item in items %}
+      <li class="program-item my-[20px] after:mt-4 after:block after:h-[1px] after:bg-[#C2B0F5] last:after:content-none">
+        {% image item.img,
+          {
+            alt: item.alt,
+            class: item.classWidth
+          }
+        %}
+        <p class="mt-[4px]">
+          {{ item.text }}
+        </p>
+      </li>
+    {% endfor %}
+  {% else %}
+    <li>This would display if the 'items' collection were empty</li>
+  {% endif %}
+</ul>

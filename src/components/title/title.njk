@@ -1,0 +1,9 @@
+{% macro h3(props) %}
+  <!-- {% set className = ' ' + props.className if props.className else '' %} -->
+  <h3 class="mb-7 font-mono text-[18px] font-semibold uppercase text-black md:mb-6 md:text-2xl xxl:text-center">
+    {# {{ props.children }} #}
+
+        {{props.text}}
+
+  </h3>
+{% endmacro %}

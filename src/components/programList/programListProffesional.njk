@@ -1,0 +1,43 @@
+
+      <ul class="mt-[20px]">
+        {% set items = [
+          {
+            caption: 'Adobe Photoshop',
+            text: 'Найпопулярніший редактор растрових зображень від компанії Adobe',
+            img: '#photoshop'
+          },
+          {
+            caption: "Adobe Lightroom",
+            text: 'Найкращий графічний редактор Adobe для роботи з цифровими фотографіями',
+            img: '#lightroom'
+          },
+                  {
+            caption: "Adobe Illustrator",
+            text: 'Програма компанії Adobe, яка створена для роботи з векторної графікою',
+            img: '#illustrator'
+          },
+                            {
+            caption: "Adobe After Effect",
+            text: 'Програма, в якій ваша дитини зробить свій перший анімаційний ролик',
+            img: '#effect'
+          },
+           {
+            caption: "Figma",
+            text: 'Краща програма для створення дизайну сайтів та мобільних додатків',
+            img: '#figma'
+          }
+        ] %}
+        {% if items.length %}
+          {% for item in items %}
+            <li class="program-item mb-5 after:mt-4 after:block after:h-[1px] after:bg-[#F5D1B8] last:after:content-none text-[16px]">
+              <svg class="w-[32px] h-[32px] inline-block">
+                <use href={{item.img}}></use>
+              </svg>
+              <h4 class=" ml-[12px] mb-[4px] inline-block font-semibold ">{{item.caption}}</h4>
+              <p class="text-[#6E6E6E]">{{ item.text }}</p>
+            </li>
+          {% endfor %}
+        {% else %}
+          <li>This would display if the 'items' collection were empty</li>
+        {% endif %}
+      </ul>

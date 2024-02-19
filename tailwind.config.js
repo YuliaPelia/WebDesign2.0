@@ -8,22 +8,20 @@ module.exports = {
       ...defaultTheme.screens,
     },
     fontFamily: {
-      'sans': [ 'IBM Plex Sans', sans_serif],
-      'mono': ['IBM Plex Mono', sans_serif],
-      'gotham': ['Gotham', sans_serif]
-
+      sans: ['IBM Plex Sans', sans_serif],
+      mono: ['IBM Plex Mono', sans_serif],
+      gotham: ['Gotham', sans_serif],
     },
 
     colors: {
-        'white': '#fff',
-        'purple': "#653cd9",
-        'light': '#faeee6',
-        'dark': '#1a1a1a',
-
+      white: '#fff',
+      purple: '#653cd9',
+      light: '#faeee6',
+      dark: '#1a1a1a',
+      palepurple: '#ebe6fa',
     },
     letterSpacing: {
       tightest: '-.01em',
-
     },
     container: {
       center: true,

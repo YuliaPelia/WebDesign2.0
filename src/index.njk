@@ -1,26 +1,20 @@
 {% extends './_layouts/base.njk' %}
 
-
 {% from './components/button/button.njk' import button %}
-
 {% block title %}
   Web-Design
 {% endblock %}
 
-
 {% block content %}
-
-
-{% include "./components/header/header.njk" %}
-{% include "./components/intro/intro.njk" %}
-{% include "./components/about/about.njk" %}
-
+  {% include './components/header/header.njk' %}
+  {% include './components/intro/intro.njk' %}
+  {% include './components/about/about.njk' %}
+  {% include './components/course/course.njk' %}
+  {% include './components/choiseCourse/choiseCourse.njk' %}
 
   <div class="page-home page">
     <div class="container">
-
       <div class="flex items-center mb-10">
-
         <h1 class="text-2xl font-medium pb-[0.05em]">
           frontenso-11ty-starter
         </h1>
@@ -67,6 +61,7 @@
           chevronRight: true
         })
       }}
+
       {% include './components/some-component/some-component.njk' %}
       <section class="mt-14">
         <h3 class="text-lg font-semibold mb-5">
@@ -105,6 +100,12 @@
             },
             500
           %}
+          {# {% image './src/images/course/lightroom.png',
+            {
+              alt: 'Wolf',
+              class: ''
+            }
+          %} #}
         </div>
       </section>
       <section class="mt-14">
@@ -124,9 +125,13 @@
         <h3 class="text-lg font-semibold mb-5">
           Vector image example (using SVG sprite)
         </h3>
-        <svg class="text-black fill-current w-20 h-20">
+        {# <svg class="text-black fill-current w-20 h-20">
           <use xlink:href="#icon-logo"></use>
-        </svg>
+        </svg> #}
+
+        {# <svg>
+          <use href="#photoshop"></use>
+        </svg> #}
       </section>
       <div class="flex items-center">
         <div></div>

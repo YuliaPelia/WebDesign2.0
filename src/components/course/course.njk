@@ -1,3 +1,29 @@
-<section>
-    
+<section class="course mt-[-60px]" id="course">
+  <div class="container">
+    <h2 class="mb-8 font-semibold font-mono text-[20px] md:text-[32px] uppercase sm:text-center md:text-left xl:text-right">
+      Спробувати себе в дизайні <br /> може кожна дитина
+    </h2>
+    <div class="course-wrapper xl:grid xl:grid-cols-2 xl:gap-x-6">
+      {% include '../cardCourse/cardCourse.njk' %}
+    </div>
+  </div>
 </section>
+
+{# {% image './src/svg/photoshop.svg',
+                {
+                  alt: 'Wolf',
+                  class: ''
+                }
+              
+              %} #}
+
+{# <svg>
+                <use href="#photoshop"></use>
+              </svg> #}
+
+{# {% image item.img,
+                {
+                  alt: 'Wolf',
+                  class: 'w-[32px] h-[32px]'
+                }
+              %} #}
