@@ -19,6 +19,8 @@ module.exports = {
       light: '#faeee6',
       dark: '#1a1a1a',
       palepurple: '#ebe6fa',
+      gray: '#ababab',
+      gold: '#fec830'
     },
     letterSpacing: {
       tightest: '-.01em',
