@@ -1,5 +1,23 @@
 .choise {
-    .container {
-        max-width: 100%;
+  background-color: #f5d1b8;
+  background-image: inline('../images/choise/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+
+  .active {
+    background: #5331b2;
+    border-radius: 144px;
+    color: #fff;
+    @media (min-width: 768px) {
+      padding: 18px 0px;
+      width: 352px;
     }
+  }
+  .tab-btn {
+    border: 1px solid transparent;
+    padding-left: 18px;
+    padding-right: 18px;
+    transition: background .3s ease,border-radius .3s ease,color .3s ease;
+}
 }
