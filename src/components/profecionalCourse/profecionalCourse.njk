@@ -1,0 +1,116 @@
+{% set course = [
+  {
+    term: 1,
+    lesson: '64 заняття',
+    topic: [
+      'Основи Adobe Photoshop: інструменти та можливості',
+      'Теорія дизайну, кольористика та типографіка',
+      'Корекція зображень, художня ретуш, графічна обробка',
+      'Фірмовий стиль',
+      'Редагування фотографій в Adobe Lightroom',
+      'Основи Adobe Illustrator: інструменти, ефекти',
+      'Створення векторних зображень для дизайну вебсайтів'
+    ],
+    project: ['Оформлення власних соціальних мереж']
+  },
+  {
+    term: 2,
+    lesson: '32 заняття',
+    topic: [
+      'Користувацький інтерфейс і вебдизайн',
+      'Figma: інструменти, інтерфейс, компоненти',
+      'Сітки, шари, шрифти, зображення, геометричні фігури',
+      'Розробка макета вебсайту',
+      'Проєктування мобільного застосунку: архітектура, інтерфейс та навігація',
+      'UI-kit для дизайнера і розробника, UX-проєктування',
+      'Робота з брифом замовника',
+      'Адаптація сторінок під мобільну версію'
+    ],
+    project: ['Дизайн мобільного додатку']
+  },
+  {
+    term: 3,
+    lesson: '48 занять',
+    topic: [
+      'Знайомство з Adobe After Effects: інструменти та базові принципи роботи в програмі',
+      'Робота з графічними елементами та створення простих анімацій 2D-об’єктів, тексту, логотипа',
+      'Робота з ефектами, плагінами, хромакеєм'
+    ],
+    project: [
+      'Створення інстаграм реклами або відеореклами на телебачення або ютуб'
+    ]
+  },
+  {
+    term: 4,
+    lesson: '48 занять',
+    topic: [
+      'Основи фільмування та відеомонтажу',
+      'Монтаж, застосування переходів, накладання тексту, звуку, ефектів в Movavi',
+      '3D-моделювання',
+      'Створення та анімація власного персонажа',
+      'Робота з текстурами, налаштування дії та переміщення',
+      'Chromakey',
+      '2D + 3D трекінг',
+      'Matchmoving',
+      'Rotoscoping та Compositing',
+      'Брифи та технічне завдання, взаємодія з замовником'
+    ],
+    project: [
+      'Створення власного портфоліо у вигляді шоу рілс'
+    ]
+  }
+] %}
+
+{% if course.length %}
+  {% for details in course %}
+    <li class="accordion-item rounded-2xl bg-white md:rounded-[40px]">
+      <div class="flex cursor-pointer item-click items-center justify-between px-3 pb-1 leading-[1.3] md:px-10 md:pb-[25px] md:pt-[17px]">
+        <div class="flex items-end gap-1 font-mono md:gap-2">
+          <span class="text-[64px] smOnly:leading-1 md:text-[120px] text-[#653CD9] font-medium md:text-[#653CD9]">
+            {{ details.term }}
+          </span>
+          <p class="flex flex-col justify-end pb-3 md:pb-6">
+            <span class="inline-block rounded-[12px] border border-[#999] px-3 py-1 text-[8px] text-[#999] md:px-4 md:py-2 md:text-[20px] w-max md:w-auto text-center">
+              {{ details.lesson }}
+            </span>
+            <span class="text-[20px] font-semibold text-[#653CD9] md:text-[32px] md:text-[#653CD9]">
+              семестр
+            </span>
+          </p>
+        </div>
+        <button class="accordion-btn relative inline-flex h-[34px] items-center px-2 py-2 text-[12px] text-[#653CD9] md:px-7 md:py-6 md:text-[24px]" aria-expanded="true">
+          <span class="mr-2 md:mr-5">Подивитись програму</span>
+          <svg class=' w-[10px] h-[8px] md:w-[20px] md:h-[16px]'>
+            <use href="#arrow"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="accordion-answer duration-500 relative flex flex-col gap-5 px-3 md:gap-6 md:px-10 overflow-hidden"
+        style="max-height: 0 ">
+        <div>
+          <h4 class="mb-1 font-mono text-[16px] font-semibold uppercase leading-[2] text-black-dark md:mb-2 md:text-2xl md:leading-[1.3]">
+            Теми семестру
+          </h4>
+          <ul class="text-black-extraLight flex flex-col gap-2 px-3 text-sm md:gap-1 md:px-6 md:text-[20px] md:leading-8 text-[#6E6E6E]">
+            {% for topic in details.topic %}
+              <li>{{ topic }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="mb-1 font-mono text-[16px] font-semibold uppercase leading-[2] text-black-dark md:mb-2 md:text-2xl md:leading-[1.3]">
+            Фінальні проЄкти
+          </h4>
+          <ul class="text-black-extraLight flex flex-col gap-2 px-3 text-sm md:gap-1 md:px-6 md:text-[20px] md:leading-8 text-[#6E6E6E] pb-[24px]">
+            {% for item in details.project %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+{% else %}
+  <li>Помилка завантаження</li>
+{% endif %}

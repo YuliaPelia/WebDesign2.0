@@ -1,34 +1,40 @@
 <section class="choise pt-10 pb-[77px] bg-[#F5D1B8] md:py-[72px] xl:py-20 xxl:py-0">
   <div class="container">
-    <h2 class="mb-6 md:mb-10 xl:mb-0 font-mono text-[20px] font-semibold uppercase text-dark">
-      Оберіть курс за віком дитини
-    </h2>
-    <div class="mb-8 md:mb-12">
-      <div class="grid grid-cols-2 rounded-[112px] bg-white text-[12px] text-[#999] md:text-2xl">
-        <button class="tab-btn active py-3 md:py-[18px] cursor-pointer">
-          Design Junior (10-12р.)
-        </button>
-        <button class="py-3 md:py-[18px] cursor-pointer tab-btn">
-          Digital Design (13-16р.)
-        </button>
+    <div class="program-wrapper xl:flex xl:justify-between xxl:bg-[#F5D1B8] xxl:p-20">
+      <h2 class="mb-6 md:mb-10 xl:mb-0 font-mono text-[20px] md:text-[32px] font-semibold uppercase text-dark xl:max-w-[293px]">
+        Оберіть курс за віком дитини
+      </h2>
+      <div class="xl:max-w-[792px]">
+        <div class="mb-8 md:mb-12">
+          <div class="grid grid-cols-2 rounded-[112px] bg-white text-[12px] text-[#999] md:text-2xl md:max-w-[704px] md:mx-auto">
+            <button class="tab-btn active py-3 md:py-[18px] cursor-pointer">
+              Design Junior (10-12р.)
+            </button>
+            <button class="py-3 md:py-[18px] cursor-pointer tab-btn">
+              Digital Design (13-16р.)
+            </button>
+          </div>
+        </div>
+
+        <div class="xl:max-w-[792px] xxl:max-w-[904px]">
+          <div class="h-187 mb-5 w-full overflow-hidden rounded-2xl md:mb-6 md:h-[395px] md:rounded-[40px] xl:h-[445px] xxl:h-[508px]">
+            <iframe width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/Iuap-kdcWNk?si=ljvE-o9kswxKO_mz"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <ul class="grid gap-5 md:gap-6 junior-course-list">
+          {% include '../juniorCourse/juniorCourse.njk' %}
+        </ul>
+        <ul class="grid gap-5 md:gap-6 professional-course-list">
+          {% include '../profecionalCourse/profecionalCourse.njk' %}
+        </ul>
       </div>
     </div>
-
-    <div class="xl:max-w-[792px] xxl:max-w-[904px]">
-      <div class="h-187 mb-5 w-full overflow-hidden rounded-2xl md:mb-6 md:h-[395px] md:rounded-[40px] xl:h-[445px] xxl:h-[508px]">
-        {# <iframe width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/Iuap-kdcWNk?si=ljvE-o9kswxKO_mz"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe> #}
-      </div>
-    </div>
-
-    <ul class="grid gap-5 md:gap-6">
-      {% include '../juniorCourse/juniorCourse.njk' %}
-
-    </ul>
   </div>
 </section>
